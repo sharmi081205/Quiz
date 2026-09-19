@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mathematical Foundation - Full Verbatim</title>
+<title>Mathematical Foundation - Final</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
 *{box-sizing:border-box}body{margin:0;font-family:Inter,sans-serif;background:#080b18;color:#fff}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 20%,#5546ff55,transparent 28%),radial-gradient(circle at 85% 75%,#00d4ff33,transparent 30%);z-index:-2}
 .screen{display:none;min-height:100vh;padding:20px}.screen.active{display:flex!important;align-items:center;justify-content:center}
-.wrap{width:min(1100px,96%);background:#ffffff0d;border:1px solid #ffffff1c;border-radius:30px;padding:32px;text-align:center}
+.wrap{width:min(1100px,96%);background:#ffffff0d;border:1px solid #ffffff1c;border-radius:30px;backdrop-filter:blur(16px);padding:32px;text-align:center}
 .badge{display:inline-block;padding:7px 14px;border-radius:30px;background:#ffffff12;border:1px solid #ffffff20;color:#b8c4ff;font-size:11px;letter-spacing:2px;font-weight:800}
-.college-title{font-family:"Playfair Display",serif;font-size:clamp(15px,2.3vw,24px);margin:16px auto 6px;font-weight:800;background:linear-gradient(90deg,#fff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
-.college-title span{display:block;font-size:.85em;margin-top:5px;background:linear-gradient(90deg,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
-.main-title{font-family:"Playfair Display",serif;font-size:clamp(22px,4vw,32px);background:linear-gradient(90deg,#fff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
+.college-title{font-family:"Playfair Display",serif;font-size:clamp(13px,1.8vw,21px);white-space:nowrap;line-height:1.2;margin:16px auto 6px;font-weight:800;background:linear-gradient(90deg,#fff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
+.main-title{font-family:"Playfair Display",serif;font-size:clamp(22px,4vw,32px);margin:12px 0 6px;background:linear-gradient(90deg,#fff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
+.lead{color:#aab3cc;font-size:13px}
 .topics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
-.topic{border:1px solid #ffffff1b;border-radius:18px;padding:18px;text-align:left;background:#ffffff0d;cursor:pointer;color:#fff;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;width:100%}
-.full{width:100%;padding:12px;border:0;border-radius:12px;background:linear-gradient(90deg,#5b4bff,#00b8d9);color:white;font-weight:800;cursor:pointer}
-input{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff22;background:#ffffff0d;color:#fff;margin-bottom:12px}
+.topic{border:1px solid #ffffff1b;border-radius:18px;padding:18px;text-align:left;background:#ffffff0d;cursor:pointer;color:#fff;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;width:100%;transition:.2s}
+.topic:hover{transform:translateY(-3px);border-color:#8ea0ff88}
+.tree-icon{font-size:44px}.full{width:100%;padding:12px;border:0;border-radius:12px;background:linear-gradient(90deg,#5b4bff,#00b8d9);color:white;font-weight:800;cursor:pointer;margin-top:10px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff22;background:#ffffff0d;color:#fff;font-size:14px;margin-bottom:12px}
 .score-circle{width:110px;height:110px;border-radius:50%;background:conic-gradient(#5b4bff 0% var(--pct), #ffffff12 var(--pct) 100%);display:flex;align-items:center;justify-content:center;margin:16px auto}
-.score-circle span{width:88px;height:88px;background:#0f1226;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
+.score-circle span{width:88px;height:88px;background:#0f1226;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
 .stat{padding:12px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff12}
-.review-item{padding:10px;border-radius:10px;background:#ffffff06;border:1px solid #ffffff10;margin-bottom:8px;text-align:left;font-size:13px}
+.review-item{padding:10px;border-radius:10px;background:#ffffff06;border:1px solid #ffffff10;margin-bottom:8px;text-align:left;font-size:13px;line-height:1.4}
+@media(max-width:700px){.college-title{font-size:11px;white-space:normal}}
 </style>
 </head>
 <body>
@@ -29,7 +32,7 @@ input{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff22;back
 <div class="wrap" style="max-width:560px">
 <span class="badge">STUDENT LOGIN</span>
 <h1 class="main-title" style="font-size:26px">Welcome to the Quiz</h1>
-<p style="color:#aab3cc">Enter your details to start the Quiz</p>
+<p class="lead">Enter your details to start the Quiz</p>
 <div style="text-align:left;margin-top:18px">
 <input id="studentName" placeholder="Enter your name">
 <input id="studentRoll" placeholder="Eg: 26PCA124">
@@ -41,20 +44,21 @@ input{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff22;back
 <div id="home" class="screen">
 <div class="wrap">
 <span class="badge">DEPARTMENT OF COMPUTER APPLICATIONS</span>
-<div class="college-title">AYYA NADAR JANAKI AMMAL COLLEGE<span>(AUTONOMOUS), SIVAKASI</span></div>
+<!-- SAME LINE COLLEGE NAME -->
+<div class="college-title">AYYA NADAR JANAKI AMMAL COLLEGE (AUTONOMOUS), SIVAKASI</div>
 <h1 class="main-title">Mathematical<br>Foundation</h1>
-<div style="margin:12px auto;padding:10px;max-width:560px;border-radius:12px;background:#0003;border:1px solid #ffffff12;font-size:12px"><b>DESIGNED BY</b><br>Sharmila M • 26PCA124</div>
+<div style="margin:12px auto;padding:10px;max-width:560px;border-radius:12px;background:#0003;border:1px solid #ffffff12;font-size:12px"><b>DESIGNED BY</b><br>Sharmila M • 26PCA124 • MCA</div>
 <div class="topics">
-<button class="topic" type="button" onclick="startQuiz('Trees')"><div style="font-size:44px">🌳</div><div><h2 style="font-size:16px">Trees</h2><p style="color:#aeb7d0;font-size:11px">20 Questions</p></div><span style="font-size:10px;background:#ffffff10;padding:6px 10px;border-radius:20px">20 QUESTIONS</span></button>
-<button class="topic" type="button" onclick="startQuiz('Boolean Algebra')"><div style="font-size:26px;font-weight:900">0 1<br>1 0</div><div><h2 style="font-size:16px">Boolean Algebra</h2><p style="color:#aeb7d0;font-size:11px">20 Questions</p></div><span style="font-size:10px;background:#ffffff10;padding:6px 10px;border-radius:20px">20 QUESTIONS</span></button>
+<button class="topic" type="button" onclick="startQuiz('Trees')"><div class="tree-icon">🌳</div><div><h2 style="font-size:16px;margin:6px 0">Trees</h2><p style="color:#aeb7d0;font-size:11px">Rooted, BST, Decision, Huffman</p></div><span style="font-size:10px;background:#ffffff10;padding:6px 10px;border-radius:20px">20 QUESTIONS</span></button>
+<button class="topic" type="button" onclick="startQuiz('Boolean Algebra')"><div style="font-size:26px;font-weight:900">0 1<br>1 0</div><div><h2 style="font-size:16px;margin:6px 0">Boolean Algebra</h2><p style="color:#aeb7d0;font-size:11px">SOP, POS, K-map, Quine</p></div><span style="font-size:10px;background:#ffffff10;padding:6px 10px;border-radius:20px">20 QUESTIONS</span></button>
 </div>
 <button class="full" type="button" onclick="startQuiz('All')">🚀 START GRAND QUIZ • 40 QUESTIONS</button>
 </div>
 </div>
 
-<div id="quiz" class="screen"><div class="wrap" style="width:min(950px,96%)"><div style="display:flex;justify-content:space-between"><span class="badge" id="topicName"></span><span class="badge" id="counter"></span></div><div style="height:8px;background:#ffffff10;border-radius:20px;margin:14px 0"><div id="bar" style="height:100%;width:0;background:linear-gradient(90deg,#6857ff,#4de4ff)"></div></div><div id="question" style="font-size:18px;margin:10px 0 18px;text-align:left;line-height:1.5"></div><div id="options" style="display:grid;gap:10px"></div><div style="display:flex;gap:10px;margin-top:18px"><button class="full" style="background:#ffffff10" type="button" onclick="prevQ()">← Previous</button><button class="full" type="button" onclick="nextQ()">Next →</button></div></div></div>
+<div id="quiz" class="screen"><div class="wrap" style="width:min(950px,96%)"><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span class="badge" id="topicName"></span><span class="badge" id="counter"></span></div><div style="height:8px;background:#ffffff10;border-radius:20px;margin:14px 0"><div id="bar" style="height:100%;width:0;background:linear-gradient(90deg,#6857ff,#4de4ff)"></div></div><div id="question" style="font-size:18px;margin:10px 0 18px;text-align:left;line-height:1.5"></div><div id="options" style="display:grid;gap:10px"></div><div style="display:flex;gap:10px;margin-top:18px"><button class="full" style="background:#ffffff10" type="button" onclick="prevQ()">← Previous</button><button class="full" type="button" onclick="nextQ()">Next →</button></div></div></div>
 
-<div id="result" class="screen"><div class="wrap" style="max-width:720px">
+<div id="result" class="screen"><div class="wrap" style="max-width:740px">
 <span class="badge">QUIZ COMPLETED</span><h2 id="resTitle"></h2>
 <div class="score-circle" id="circle"><span id="scoreText"></span></div>
 <p id="msg" style="color:#aab3cc"></p>
@@ -64,7 +68,7 @@ input{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff22;back
 <div class="stat"><b id="statPct" style="font-size:18px"></b><br><span style="font-size:11px;color:#aab3cc">Score</span></div>
 </div>
 <button class="full" type="button" onclick="goToMainPage()">← Back</button>
-<div id="review" style="margin-top:18px;max-height:350px;overflow:auto"></div>
+<div id="review" style="margin-top:18px;max-height:380px;overflow:auto"></div>
 </div></div>
 
 <script>
@@ -145,7 +149,7 @@ function finishQ(){
   document.getElementById('statWrong').textContent=w;
   document.getElementById('statPct').textContent=pct+'%';
   document.getElementById('msg').textContent=pct>=80?'Outstanding! 🌟':pct>=60?'Great Job! 🎉':'Keep Practising! 💪';
-  let r=document.getElementById('review');r.innerHTML='<b style="color:#aab3cc">Detailed Review - Full Questions</b>';
+  let r=document.getElementById('review');r.innerHTML='<b style="color:#aab3cc">Detailed Review</b>';
   qs.forEach((q,i)=>{
     let ok=ans[i]===q[1];
     r.innerHTML+='<div class="review-item"><b>Q'+(i+1)+':</b> '+q[0]+'<br>Your: <span style="color:'+(ok?'#4ade80':'#f87171')+'">'+(ans[i]||'Not answered')+'</span> | Correct: <span style="color:#4ade80">'+q[1]+'</span> '+(ok?'✅':'❌')+'</div>';
