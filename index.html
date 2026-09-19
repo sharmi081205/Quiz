@@ -11,28 +11,31 @@ body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle 
 .screen{display:none;min-height:100vh;padding:20px}.screen.active{display:flex!important;align-items:center;justify-content:center}
 .wrap{width:min(1100px,96%);background:#ffffff0d;border:1px solid #ffffff1c;border-radius:30px;backdrop-filter:blur(18px);box-shadow:0 30px 80px #0008;padding:38px}
 .brand{text-align:center}.badge{display:inline-block;padding:8px 15px;border-radius:30px;background:#ffffff12;border:1px solid #ffffff20;color:#b8c4ff;font-size:12px;letter-spacing:2px;font-weight:800}
-/* COLLEGE NEXT LINE - UN KETTA MATHIRI */
 .college-title{font-family:"Playfair Display",serif;font-size:clamp(18px,2.8vw,30px);line-height:1.15;margin:18px auto 6px;font-weight:800;text-align:center;background:linear-gradient(90deg,#ffffff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
 .college-title span{display:block;font-family:Inter,Arial,sans-serif;font-size:.85em;letter-spacing:2px;margin-top:6px;background:linear-gradient(90deg,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent}
 h1.main-title{font-family:"Playfair Display",serif;font-size:clamp(24px,4vw,38px);margin:14px 0 8px;background:linear-gradient(90deg,#fff,#a9b7ff,#67e8f9);-webkit-background-clip:text;color:transparent;line-height:1.25}
 .lead{color:#aab3cc;font-size:16px}.creator{margin:20px auto;padding:18px;max-width:650px;border-radius:18px;background:#0003;border:1px solid #ffffff12;line-height:1.8;color:#dbe3ff}.creator b{color:#fff}
-/* RENDU BOX SIZE FIRST KUDUTHA MATHIRI PERUSA */
 .topics{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:30px 0}.topic{position:relative;border:1px solid #ffffff1b;border-radius:24px;padding:30px 26px;text-align:left;background:linear-gradient(145deg,#ffffff12,#ffffff05);cursor:pointer;color:#fff;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
 .topic:hover{transform:translateY(-6px);border-color:#8ea0ff88;box-shadow:0 20px 45px #0005}
 .tree-icon{font-size:72px;line-height:1;margin-bottom:10px}
 .topic h2{margin:12px 0 8px;font-size:22px}.topic p{color:#aeb7d0;font-size:14px;line-height:1.5;margin:0}.count{display:inline-block;margin-top:18px;padding:9px 14px;border-radius:20px;background:#ffffff10;color:#c8d1ff;font-size:12px;font-weight:700}
 .full{width:100%;padding:16px;border:0;border-radius:14px;background:linear-gradient(90deg,#5b4bff,#00b8d9);color:white;font-size:17px;font-weight:800;cursor:pointer}
-@media(max-width:700px){.topics{grid-template-columns:1fr 1fr;gap:14px}.topic{padding:20px 16px;min-height:260px}.tree-icon{font-size:58px}.college-title{font-size:13px}h1.main-title{font-size:22px}}
+.quizwrap{width:min(950px,96%)}.qhead{display:flex;justify-content:space-between;gap:15px}.pill{padding:8px 13px;background:#ffffff10;border:1px solid #ffffff18;border-radius:20px;color:#cdd6ff;font-size:13px}
+.progress{height:9px;background:#ffffff10;border-radius:20px;margin:18px 0 28px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6857ff,#4de4ff);transition:.3s}
+.qno{color:#8290ba;font-weight:700;font-size:14px}.question{font-size:26px;line-height:1.4;margin:12px 0 24px}.options{display:grid;gap:14px}.opt{border:1px solid #ffffff18;background:#ffffff09;color:#eef2ff;border-radius:16px;padding:18px;text-align:left;font-size:16px;cursor:pointer}.opt.selected{background:#5965ff33;border-color:#91a0ff}.letter{display:inline-flex;width:32px;height:32px;border-radius:10px;align-items:center;justify-content:center;background:#ffffff12;margin-right:10px;font-weight:800;color:#aebcff}
+.actions{display:flex;justify-content:space-between;margin-top:28px;gap:12px}.btn{padding:13px 20px;border-radius:12px;border:1px solid #ffffff18;background:#ffffff0d;color:#fff;cursor:pointer}.btn.primary{background:linear-gradient(90deg,#5b4bff,#00a9cf);border:0;font-weight:800}
+.result{text-align:center}.score{font-size:60px;font-weight:800;background:linear-gradient(90deg,#fff,#75e6ff);-webkit-background-clip:text;color:transparent}
+@media(max-width:700px){.topics{grid-template-columns:1fr 1fr;gap:14px}.topic{padding:20px 16px;min-height:260px}.tree-icon{font-size:58px}.college-title{font-size:13px}}
 </style>
 </head>
 <body>
 
-<!-- LOGIN - FIRST KUDUTHA MATHIRI + 100% WORKING -->
+<!-- LOGIN PAGE TEXT CHANGE PANNITEN -->
 <div id="login" class="screen active">
 <div class="wrap brand" style="max-width:650px">
 <span class="badge">STUDENT LOGIN</span>
 <h1 class="main-title" style="font-size:32px">Welcome to the Quiz</h1>
-<p class="lead">Enter your details to start the advanced MCA quiz.</p>
+<p class="lead">Enter your details to start the Quiz</p>
 <div style="text-align:left;margin-top:28px">
 <label style="display:block;margin:0 0 8px;font-weight:700">Student Name</label>
 <input id="studentName" type="text" placeholder="Enter your name" style="width:100%;padding:15px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff0d;color:#fff;font-size:16px;margin-bottom:18px">
@@ -43,7 +46,7 @@ h1.main-title{font-family:"Playfair Display",serif;font-size:clamp(24px,4vw,38px
 </div>
 </div>
 
-<!-- HOME PAGE - SCREENSHOT MATHIRI -->
+<!-- HOME PAGE - CLICK WORK AAGUM -->
 <div id="home" class="screen">
 <div class="wrap brand">
 <span class="badge">DEPARTMENT OF COMPUTER APPLICATIONS</span>
@@ -52,21 +55,26 @@ h1.main-title{font-family:"Playfair Display",serif;font-size:clamp(24px,4vw,38px
 <p class="lead">The Grand Interactive Quiz Experience</p>
 <div class="creator"><b>DESIGNED BY</b><br>Sharmila M • 26PCA124<br><span style="color:#aeb7d0">MCA • Advanced MCQ Practice</span></div>
 <div class="topics">
-<div class="topic"><div class="tree-icon">🌳</div><div><h2>Trees</h2><p>Analyze BSTs, AVL rotations, heaps</p></div><span class="count">20 QUESTIONS</span></div>
-<div class="topic"><div style="width:56px;height:56px;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px"><div style="background:#6366f1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">0</div><div style="background:#8b5cf6;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">1</div><div style="background:#8b5cf6;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">1</div><div style="background:#6366f1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">0</div></div><div><h2>Boolean<br>Algebra</h2><p>Boolean identities, De Morgan, K-maps</p></div><span class="count">20 QUESTIONS</span></div>
+<button class="topic" onclick="startQuiz('Trees')"><div class="tree-icon">🌳</div><div><h2>Trees</h2><p>Analyze BSTs, AVL rotations, heaps</p></div><span class="count">20 QUESTIONS</span></button>
+<button class="topic" onclick="startQuiz('Boolean Algebra')"><div style="width:56px;height:56px;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px"><div style="background:#6366f1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">0</div><div style="background:#8b5cf6;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">1</div><div style="background:#8b5cf6;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">1</div><div style="background:#6366f1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:white">0</div></div><div><h2>Boolean<br>Algebra</h2><p>Boolean identities, De Morgan, K-maps</p></div><span class="count">20 QUESTIONS</span></button>
 </div>
-<button class="full">🚀 START GRAND QUIZ • 40 QUESTIONS</button>
+<button class="full" onclick="startQuiz('All')">🚀 START GRAND QUIZ • 40 QUESTIONS</button>
 </div>
 </div>
 
+<!-- QUIZ SCREEN -->
+<div id="quiz" class="screen"><div class="wrap quizwrap">
+<div class="qhead"><div><span class="badge" id="topicName"></span><div class="qno" id="counter"></div></div><span class="pill" id="answered">0 answered</span></div>
+<div class="progress"><i id="bar"></i></div><div class="question" id="question"></div><div class="options" id="options"></div>
+<div class="actions"><button class="btn" onclick="prevQ()">← Previous</button><button class="btn primary" onclick="nextQ()">Next →</button></div>
+</div></div>
+
+<!-- RESULT SCREEN -->
+<div id="result" class="screen"><div class="wrap result">
+<div style="font-size:70px">🏆</div><span class="badge">QUIZ COMPLETED</span><h2 id="resTitle"></h2><div class="score" id="score"></div><p id="msg"></p>
+<div class="actions" style="justify-content:center"><button class="btn" onclick="showScreen('home')">⌂ Home</button><button class="btn primary" onclick="restart()">↻ Try Again</button></div>
+<div id="review" style="text-align:left;margin-top:20px;max-height:300px;overflow:auto"></div>
+</div></div>
+
 <script>
-function goHome(){
-  var n=document.getElementById('studentName').value.trim();
-  var r=document.getElementById('studentRoll').value.trim();
-  if(n==="" || r===""){alert("Please enter Name & Roll No");return;}
-  document.getElementById('login').classList.remove('active');
-  document.getElementById('home').classList.add('active');
-}
-</script>
-</body>
-</html>
+const T=[["A full binary tree contains 15 internal vertices. What is the number of leaves?","16, 31","15, 31","16, 30","15, 30"],["An ordered rooted tree has root A with children B, C and D; B has children E and F; D has child G. What is its preorder?","A B E F C D G","E F B C G D A","A C B E F D G","A B C D E F G"],["A root has 4 children, one level-1 vertex has 4 children. Max children?","4","3","5","8"],["12 vertices 11 edges. Which true?","The graph is a tree","One cycle","Disconnected","Degree 2"],["Insert 50,30,70,20,40,60,80,35. Inorder predecessor of 40?","35","20","30","50"],["Decreasing order BST height n nodes root level 0?","n - 1","log₂ n","n","n + 1"],["Deleting node with two
